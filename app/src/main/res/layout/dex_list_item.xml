@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_height="80sp"
+    android:layout_width="match_parent">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="match_parent"
+        android:id="@+id/dex_item_num"
+        android:textSize="25sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent"
+        android:id="@+id/dex_item_name"
+        android:textSize="40sp"
+        android:gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_height="match_parent"
+      android:layout_width="match_parent">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/poke_dex"
+            android:checked="false"
+            android:title="@string/pokeDex" />
+
+        <item
+            android:id="@+id/attack_dex"
+            android:checked="false"
+            android:title="@string/attackDex" />
+
+        <item
+            android:id="@+id/location_dex"
+            android:checked="false"
+            android:title="@string/locationDex" />
+    </group>
+</menu>
