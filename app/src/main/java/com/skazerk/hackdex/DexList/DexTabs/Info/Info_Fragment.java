@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment;
 import com.skazerk.hackdex.GlobalClass;
+import com.skazerk.hackdex.Main;
 import com.skazerk.hackdex.R;
 
 import static com.skazerk.hackdex.R.id.poke_name;
@@ -58,12 +60,19 @@ public class Info_Fragment extends Fragment{
 
             infoHolder.ability1 = view.findViewById(R.id.abil1);
 
+            infoHolder.ability1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ((Main)getActivity()).onClickInfo((TextView) view);
+                }
+            });
+
             if(global.getInfoLayout().getAbilties().size() == 2)
                 infoHolder.ability2 = view.findViewById(R.id.abil2);
 
             if(global.getInfoLayout().getAbilties().size() == 3){
-                infoHolder.ability3 = view.findViewById(R.id.abil3);
                 infoHolder.ability2 = view.findViewById(R.id.abil2);
+                infoHolder.ability3 = view.findViewById(R.id.abil3);
             }
 
             infoHolder.stats = view.findViewById(R.id.stats);
@@ -153,10 +162,6 @@ public class Info_Fragment extends Fragment{
     public void onPause(){
         super.onPause();
         this.onDestroy();
-    }
-
-    public void onClickInfo(View view) {
-
     }
 
     public void onResume(){

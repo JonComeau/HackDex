@@ -79,22 +79,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/abil1"
-                    android:onClick="onClickInfo"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/abil2"
-                    android:onClick="onClickInfo"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/abil3"
-                    android:onClick="onClickInfo"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:layout_width="wrap_content"

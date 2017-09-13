@@ -6,15 +6,19 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.skazerk.hackdex.DexList.DexListFragment;
+import com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -98,7 +102,9 @@ public class Main extends AppCompatActivity {
 
     public void loadPokemonFromJSON(String pokemon) {
         String path = "games/" + global.getGame() + "/pokemon/" + pokemon.toLowerCase() + "/" + pokemon.toLowerCase();
+        Log.d("Main", path);
         String pokemonJSON = loadJSONFromAsset(path);
+        Log.d("Main", pokemonJSON);
         global.getPoke().parseJSON(pokemonJSON);
     }
 
@@ -158,6 +164,10 @@ public class Main extends AppCompatActivity {
         }
     }
 
+    public void onClickInfo(TextView view) {
+        showBottomSheet("info", view.getText().toString());
+    }
+
     private void loadGames(){
         games = new ArrayList<>();
         try {
@@ -192,5 +202,14 @@ public class Main extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void showBottomSheet(String version, String ability) {
+        FragmentTransaction transaction = (this)
+                .getSupportFragmentManager()
+                .beginTransaction();
+
+        new com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment();
+        com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment.newInstance(ability).show(transaction, version);
     }
 }

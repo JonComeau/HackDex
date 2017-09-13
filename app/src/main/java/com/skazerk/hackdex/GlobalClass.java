@@ -15,7 +15,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -24,8 +28,9 @@ import java.util.Scanner;
 
 public class GlobalClass extends Application {
     private List<String> pokemon = new ArrayList<>();
-    private String game;
     private List<Move> moves;
+    private String game;
+    private Map<String, List<PokemonSmall>> abilitiesList;
 
     public String getGame() {
         return game;
@@ -33,6 +38,10 @@ public class GlobalClass extends Application {
 
     public void setGame(String game) {
         this.game = game;
+    }
+
+    public Map<String, List<PokemonSmall>> getAbilitiesList() {
+        return abilitiesList;
     }
 
     public List<String> getPokemon() {
@@ -88,22 +97,22 @@ public class GlobalClass extends Application {
     private InfoLayout infoLayout;
     private NameLayout nameLayout;
 
-    public GlobalClass() {
-
+    public GlobalClass(){
+        resetPoke();
+        abilitiesList = new HashMap<>();
     }
 
-    public GlobalClass(String game){
-        poke = new Pokemon();
-        this.game = game;
-        loadMoves();
-    }
-
-    public List<String> getMoves(){
+    public List<String> getMoves() {
         List<String> tmp_moves = new ArrayList<>();
         for (Move move : moves) {
             tmp_moves.add(move.name);
         }
         return tmp_moves;
+    }
+
+    public List<String> getAbilities() {
+        List<String> tmpAbilities = new ArrayList<>();
+        return tmpAbilities;
     }
 
     public void loadMoves() {
@@ -130,7 +139,7 @@ public class GlobalClass extends Application {
         }
     }
 
-    public void resetPoke() { this.poke = new Pokemon(); }
+    public void resetPoke() { this.poke = new Pokemon(this); }
 
     public Pokemon getPoke() { return poke; }
 
@@ -139,6 +148,15 @@ public class GlobalClass extends Application {
         public String inGameText;
         public String inGameEffect;
         public String basePP;
+    }
+
+    public class PokemonSmall {
+        public PokemonSmall(String num, String name) {
+            this.num = num;
+            this.name = name;
+        }
+        public String num;
+        public String name;
     }
 
     private class MoveComparator implements Comparator<Move> {

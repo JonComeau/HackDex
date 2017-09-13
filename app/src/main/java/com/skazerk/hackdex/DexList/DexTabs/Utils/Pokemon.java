@@ -2,12 +2,14 @@ package com.skazerk.hackdex.DexList.DexTabs.Utils;
 
 import com.skazerk.hackdex.DexList.DexTabs.Area.Area;
 import com.skazerk.hackdex.DexList.DexTabs.Info.Ability;
+import com.skazerk.hackdex.GlobalClass;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -22,11 +24,16 @@ public class Pokemon {
     private ArrayList<Stat> stats = new ArrayList<>();
     private ArrayList<Move> lvl_moves = new ArrayList<>();
     private ArrayList<Integer> effects = new ArrayList<>();
+    private GlobalClass global;
 
     private ArrayList<ArrayList<String>> evos = new ArrayList<>();
 
     //area list: walking, surfing, fishing, event
     private Area areas = new Area();
+
+    public Pokemon(GlobalClass global) {
+        this.global = global;
+    }
 
     public String getPer(String area, String method) {
         switch(method) {
@@ -134,6 +141,13 @@ public class Pokemon {
                 abil.setAbitily(abil_obj.getString("ability"));
                 abil.setText(abil_obj.getString("text"));
                 abil.setEffect(abil_obj.getString("effect"));
+
+                if (global.getAbilitiesList().get(abil.getAbitily()) == null){
+                    global.getAbilitiesList().put(abil.getAbitily(), Arrays.asList(global.new PokemonSmall(num_name[0], num_name[1])));
+                } else {
+                    global.getAbilitiesList().get(abil.getAbitily()).add(global.new PokemonSmall(num_name[0], num_name[1]));
+                }
+
                 abilities.add(abil);
             }
 
