@@ -155,7 +155,7 @@ public class Info_Fragment extends Fragment{
         this.onDestroy();
     }
 
-    public void onClick(View view) {
+    public void onClickInfo(View view) {
 
     }
 

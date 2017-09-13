@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.skazerk.hackdex.DexList.DexListFragment;
@@ -141,6 +142,7 @@ public class Main extends AppCompatActivity {
         getSupportFragmentManager().popBackStack("Dex Tab", FragmentManager.POP_BACK_STACK_INCLUSIVE);
         global.resetPoke();
     }
+
 
     public void addFragment(Fragment fragment, String name) {
         if(getSupportFragmentManager().getBackStackEntryCount() == 0) {
