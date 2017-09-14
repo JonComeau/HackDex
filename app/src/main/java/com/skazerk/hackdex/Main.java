@@ -13,12 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.skazerk.hackdex.DexList.DexListFragment;
-import com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment;
+import com.skazerk.hackdex.PokeDexList.DexListFragment;
+import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -209,7 +208,7 @@ public class Main extends AppCompatActivity {
                 .getSupportFragmentManager()
                 .beginTransaction();
 
-        new com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment();
-        com.skazerk.hackdex.DexList.DexTabs.Info.BottomSheet.BottomSheetFragment.newInstance(ability).show(transaction, version);
+        new com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheet.BottomSheetFragment();
+        com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheet.BottomSheetFragment.newInstance(ability).show(transaction, version);
     }
 }
