@@ -1,0 +1,14 @@
+{
+    "abilities": [
+        {
+            "ability": "Overgrow",
+            "text": "Ups Grass moves in a pinch",
+            "effect": "Grass-type move's power is increases by 50% when HP is below 33% of maximum"
+        },
+        {
+            "ability": "Thick Fat",
+            "text": "Heat-and-cold protection",
+            "effect": "When attacked by a fire/ice move, the move's power is cut in half"
+        }
+    ]
+}

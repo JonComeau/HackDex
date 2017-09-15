@@ -1,0 +1,139 @@
+{
+  "pokemon": {
+    "name": "Nimbleaf",
+    "num": "1",
+    "entry": "If it is starving, it will eat its own leaf for sustenance. Apparently, the leaf doesn't taste very good.",
+    "type_list": [
+      {
+        "type": "grass"
+      }
+    ],
+    "stats":[
+      {
+        "stat": "Health",
+        "amount": "42"
+      },
+      {
+        "stat": "Attack",
+        "amount": "53"
+      },
+      {
+        "stat": "Defense",
+        "amount": "40"
+      },
+      {
+        "stat": "Speed",
+        "amount": "70"
+      },
+      {
+        "stat": "Special Attack",
+        "amount": "63"
+      },
+      {
+        "stat": "Special Defense",
+        "amount": "40"
+      }
+    ],
+    "ability": [
+      {
+        "ability": "OverGrow",
+        "text": "Ups Grass moves in a pinch",
+        "effect": "Grass-type move's power is increases by 50% when HP is below 33% of maximum"
+      },
+      {
+        "ability": "Thick Fat",
+        "text": "Heat-and-cold protection",
+        "effect": "When attacked by a fire/ice move, the move's power is cut in half"
+      }
+    ],
+    "moves": {
+      "level": [
+        {
+          "lvl": "1",
+          "move": "Scratch",
+          "type": "Normal",
+          "catagory": "Physical"
+        },
+        {
+          "lvl": "1",
+          "move": "Tail Whip",
+          "type": "Normal",
+          "catagory": "Effect"
+        },
+        {
+          "lvl": "7",
+          "move": "Absorb",
+          "type": "Grass",
+          "catagory": "Special"
+        },
+        {
+          "lvl": "10",
+          "move": "Gust",
+          "type": "Flying",
+          "catagory": "Physical"
+        },
+        {
+          "lvl": "13",
+          "move": "Razor Leaf",
+          "type": "Grass",
+          "catagory": "Physical"
+        },
+        {
+          "lvl": "16",
+          "move": "Growth",
+          "type": "Grass",
+          "catagory": "Effect"
+        },
+        {
+          "lvl": "19",
+          "move": "False Swipe",
+          "type": "Normal",
+          "catagory": "Physical"
+        },
+        {
+          "lvl": "22",
+          "move": "Mega Drain",
+          "type": "Grass",
+          "catagory": "Special"
+        },
+        {
+          "lvl": "25",
+          "move": "Leech Seed",
+          "type": "Grass",
+          "catagory": "Effect"
+        },
+        {
+          "lvl": "28",
+          "move": "Aerial Ace",
+          "type": "Flying",
+          "catagory": "Physical"
+        }
+      ]
+    },
+    "areas": {
+        "walking": [
+        {
+          "area": "Safari Zone (east)",
+          "percent": "40"
+        }
+      ],
+      "surfing": [],
+      "fishing": [],
+      "event": []
+    },
+    "evolutions": [
+      {
+        "name": "Nimbleaf",
+        "level": ""
+      },
+      {
+        "name": "Parsleaf",
+        "level": "16"
+      },
+      {
+        "name": "Caudaleaf",
+        "level": "34"
+      }
+    ]
+  }
+}

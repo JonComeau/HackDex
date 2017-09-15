@@ -1,0 +1,308 @@
+{
+  "moves": [
+    {
+      "move_name": "Absorb",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "20",
+      "accuracy": "100",
+      "pp": "25"
+    },
+    {
+      "move_name": "Aerial Ace",
+      "type": "Flying",
+      "catagory": "Physical",
+      "power": "60",
+      "accuracy": "",
+      "pp": ""
+    },
+    {
+      "move_name": "Agility",
+      "type": "Psychic",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": ""
+    },
+    {
+      "move_name": "Air Slash",
+      "type": "Flying",
+      "catagory": "Special",
+      "power": "75",
+      "accuracy": "95",
+      "pp": "20"
+    },
+    {
+      "move_name": "False Swipe",
+      "type": "Normal",
+      "catagory": "Physical",
+      "power": "40",
+      "accuracy": "100",
+      "pp": "40"
+    },
+    {
+      "move_name": "Frenzy Plant",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "150",
+      "accuracy": "90",
+      "pp": ""
+    },
+    {
+      "move_name": "Giga Drain",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "75",
+      "accuracy": "100",
+      "pp": ""
+    },
+    {
+      "move_name": "Growth",
+      "type": "Grass",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": "20"
+    },
+    {
+      "move_name": "Guardian Leaf",
+      "type": "Grass",
+      "catagory": "Physical",
+      "power": "75",
+      "accuracy": "95",
+      "pp": "15"
+    },
+    {
+      "move_name": "Gust",
+      "type": "Flying",
+      "catagory": "Special",
+      "power": "40",
+      "accuracy": "100",
+      "pp": "35"
+    },
+    {
+      "move_name": "Leaf Storm",
+      "type": "Grass ",
+      "catagory": "Special",
+      "power": "",
+      "accuracy": "100",
+      "pp": ""
+    },
+    {
+      "move_name": "Leaf Tornado",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "65",
+      "accuracy": "90",
+      "pp": "10"
+    },
+    {
+      "move_name": "Leech Seed",
+      "type": "Grass",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "90",
+      "pp": "10"
+    },
+    {
+      "move_name": "Mega Drain",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "40",
+      "accuracy": "100",
+      "pp": "40"
+    },
+    {
+      "move_name": "Razor Leaf",
+      "type": "Grass",
+      "catagory": "Physical",
+      "power": "55",
+      "accuracy": "95",
+      "pp": "25"
+    },
+    {
+      "move_name": "Scratch",
+      "type": "Normal",
+      "catagory": "Physical",
+      "power": "40",
+      "accuracy": "100",
+      "pp": "35"
+    },
+    {
+      "move_name": "Seed Bomb",
+      "type": "Grass",
+      "catagory": "Physical",
+      "power": "80",
+      "accuracy": "100",
+      "pp": ""
+    },
+    {
+      "move_name": "Synthesis",
+      "type": "Grass",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": ""
+    },
+    {
+      "move_name": "Tail Whip",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "100",
+      "pp": "30"
+    },
+    {
+      "move_name": "Whirlwind",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "100",
+      "pp": "20"
+    },
+    {
+      "move_name": "Wild Growth",
+      "type": "Grass",
+      "catagory": "Physical",
+      "power": "100",
+      "accuracy": "95",
+      "pp": "10"
+    },
+    {
+      "move_name": "Solar Beam",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "120",
+      "accuracy": "100",
+      "pp": ""
+    },
+    {
+      "move_name": "Typhoon",
+      "type": "Flying",
+      "catagory": "Special",
+      "power": "",
+      "accuracy": "",
+      "pp": ""
+    },
+    {
+      "move_name": "Leaf Blade",
+      "type": "Grass",
+      "catagory": "Physical",
+      "power": "90",
+      "accuracy": "100",
+      "pp": ""
+    },
+    {
+      "move_name": "Energy Ball",
+      "type": "Grass",
+      "catagory": "Special",
+      "power": "80",
+      "accuracy": "100",
+      "pp": "10"
+    },
+    {
+      "move_name": "Bounce",
+      "type": "Flying",
+      "catagory": "Physical",
+      "power": "85",
+      "accuracy": "85",
+      "pp": "5"
+    },
+    {
+      "move_name": "Swords Dance",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": "30"
+    },
+    {
+      "move_name": "Spikes",
+      "type": "Ground",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": "20"
+    },
+    {
+      "move_name": "Headbutt",
+      "type": "Normal",
+      "catagory": "Physical",
+      "power": "70",
+      "accuracy": "100",
+      "pp": "15"
+    },
+    {
+      "move_name": "Shadow Claw",
+      "type": "Ghost",
+      "catagory": "Physical",
+      "power": "70",
+      "accuracy": "100",
+      "pp": "15"
+    },
+    {
+      "move_name": "Substitute",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": "10"
+    },
+    {
+      "move_name": "Poison Leaf",
+      "type": "Poison",
+      "catagory": "Physical",
+      "power": "70",
+      "accuracy": "100",
+      "pp": "20"
+    },
+    {
+      "move_name": "Iron Tail",
+      "type": "Steel",
+      "catagory": "Physical",
+      "power": "100",
+      "accuracy": "75",
+      "pp": "15"
+    },
+    {
+      "move_name": "Tri Attack",
+      "type": "Normal",
+      "catagory": "Special",
+      "power": "80",
+      "accuracy": "100",
+      "pp": "10"
+    },
+    {
+      "move_name": "Baton Pass",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "",
+      "pp": "40"
+    },
+    {
+      "move_name": "Cut",
+      "type": "Normal",
+      "catagory": "Physical",
+      "power": "50",
+      "accuracy": "95",
+      "pp": "30"
+    },
+    {
+      "move_name": "Flash",
+      "type": "Normal",
+      "catagory": "Status",
+      "power": "",
+      "accuracy": "100",
+      "pp": "20"
+    },
+    {
+      "move_name": "Rock Smash",
+      "type": "Fighting",
+      "catagory": "Physical",
+      "power": "40",
+      "accuracy": "100",
+      "pp": "15"
+    }
+  ]
+}

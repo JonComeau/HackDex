@@ -1,0 +1,407 @@
+{
+  "pokemon": {
+    "name": "Caudaleaf",
+    "num": "3",
+    "entry": "The leaf on its tail is just as sharp as the leaves on its back. Its leaves can cut through even solid steel",
+    "type_list": [
+      {
+        "type": "grass"
+      },
+      {
+        "type": "flying"
+      }
+    ],
+    "stats": [
+      {
+        "stat": "Health",
+        "amount": "76"
+      },
+      {
+        "stat": "Attack",
+        "amount": "91"
+      },
+      {
+        "stat": "Defense",
+        "amount": "75"
+      },
+      {
+        "stat": "Speed",
+        "amount": "103"
+      },
+      {
+        "stat": "Special Attack",
+        "amount": "75"
+      },
+      {
+        "stat": "Special Defense",
+        "amount": "115"
+      }
+    ],
+    "ability": [
+      {
+        "text": "Ups Grass moves in a pinch",
+        "ability": "Overgrow",
+        "effect": "Grass-type move's power is increases by 50% when HP is below 33% of maximum"
+      },
+      {
+        "text": "Heat-and-cold protection",
+        "ability": "Thick Fat",
+        "effect": "When attacked by a fire/ice move, the move's power is cut in half"
+      }
+    ],
+    "moves": {
+      "level": [
+        {
+          "move": "Absorb",
+          "lvl": "1",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "25",
+          "power": "20",
+          "accuracy": "100"
+        },
+        {
+          "move": "Frenzy Plant",
+          "lvl": "1",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "",
+          "power": "150",
+          "accuracy": "90"
+        },
+        {
+          "move": "Gust",
+          "lvl": "1",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "35",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Scratch",
+          "lvl": "1",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "35",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Solar Beam",
+          "lvl": "1",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "",
+          "power": "120",
+          "accuracy": "100"
+        },
+        {
+          "move": "Tail Whip",
+          "lvl": "1",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "30",
+          "power": "",
+          "accuracy": "100"
+        },
+        {
+          "move": "Typhoon",
+          "lvl": "1",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "Absorb",
+          "lvl": "7",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "25",
+          "power": "20",
+          "accuracy": "100"
+        },
+        {
+          "move": "Gust",
+          "lvl": "10",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "35",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Razor Leaf",
+          "lvl": "13",
+          "type": "Grass",
+          "catagory": "Physical",
+          "pp": "25",
+          "power": "55",
+          "accuracy": "95"
+        },
+        {
+          "move": "Growth",
+          "lvl": "16",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "False Swipe",
+          "lvl": "20",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "40",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Leaf Tornado",
+          "lvl": "24",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "65",
+          "accuracy": "90"
+        },
+        {
+          "move": "Whirlwind",
+          "lvl": "28",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": "100"
+        },
+        {
+          "move": "Leaf Blade",
+          "lvl": "32",
+          "type": "Grass",
+          "catagory": "Physical",
+          "pp": "",
+          "power": "90",
+          "accuracy": "100"
+        },
+        {
+          "move": "Energy Ball",
+          "lvl": "36",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "80",
+          "accuracy": "100"
+        },
+        {
+          "move": "Bounce",
+          "lvl": "39",
+          "type": "Flying",
+          "catagory": "Physical",
+          "pp": "5",
+          "power": "85",
+          "accuracy": "85"
+        },
+        {
+          "move": "Synthesis",
+          "lvl": "46",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "Wild Growth",
+          "lvl": "53",
+          "type": "Grass",
+          "catagory": "Physical",
+          "pp": "10",
+          "power": "100",
+          "accuracy": "95"
+        },
+        {
+          "move": "Agility",
+          "lvl": "60",
+          "type": "Psychic",
+          "catagory": "Status",
+          "pp": "",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "Leaf Storm",
+          "lvl": "67",
+          "type": "Grass ",
+          "catagory": "Special",
+          "pp": "",
+          "power": "",
+          "accuracy": "100"
+        }
+      ],
+      "tm": [
+        {
+          "tm": "TM 01",
+          "move": "Swords Dance",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "30",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 02",
+          "move": "Air Slash",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "20",
+          "power": "75",
+          "accuracy": "95"
+        },
+        {
+          "tm": "TM 03",
+          "move": "Spikes",
+          "type": "Ground",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 06",
+          "move": "Headbutt",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 11",
+          "move": "Shadow Claw",
+          "type": "Ghost",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 13",
+          "move": "Substitute",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "10",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 16",
+          "move": "Energy Ball",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "80",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 19",
+          "move": "Poison Leaf",
+          "type": "Poison",
+          "catagory": "Physical",
+          "pp": "20",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 21",
+          "move": "Leech Seed",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "10",
+          "power": "",
+          "accuracy": "90"
+        },
+        {
+          "tm": "TM 23",
+          "move": "Iron Tail",
+          "type": "Steel",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "100",
+          "accuracy": "75"
+        },
+        {
+          "tm": "TM 32",
+          "move": "Tri Attack",
+          "type": "Normal",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "80",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 34",
+          "move": "Baton Pass",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "40",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "HM 01",
+          "move": "Cut",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "30",
+          "power": "50",
+          "accuracy": "95"
+        },
+        {
+          "tm": "HM 05",
+          "move": "Flash",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": "100"
+        },
+        {
+          "tm": "HM 06",
+          "move": "Rock Smash",
+          "type": "Fighting",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "40",
+          "accuracy": "100"
+        }
+      ],
+      "tutor": []
+    },
+    "areas": {
+      "walking": [],
+      "surfing": [],
+      "fishing": [],
+      "event": []
+    },
+    "evolutions": [
+      {
+        "num": "1",
+        "name": "Nimbleaf",
+        "level": ""
+      },
+      {
+        "num": "2",
+        "name": "Parsleaf",
+        "level": "16"
+      },
+      {
+        "num": "",
+        "name": "3Caudaleaf",
+        "level": "34"
+      }
+    ]
+  }
+}

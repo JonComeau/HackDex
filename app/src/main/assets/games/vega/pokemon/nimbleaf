@@ -1,0 +1,359 @@
+{
+  "pokemon": {
+    "name": "Nimbleaf",
+    "num": "1",
+    "entry": "If it is starving, it will eat its own leaf for sustenance. Apparently, the leaf doesn't taste very good.",
+    "type_list": [
+      {
+        "type": "grass"
+      }
+    ],
+    "stats": [
+      {
+        "stat": "Health",
+        "amount": "42"
+      },
+      {
+        "stat": "Attack",
+        "amount": "53"
+      },
+      {
+        "stat": "Defense",
+        "amount": "40"
+      },
+      {
+        "stat": "Speed",
+        "amount": "70"
+      },
+      {
+        "stat": "Special Attack",
+        "amount": "63"
+      },
+      {
+        "stat": "Special Defense",
+        "amount": "40"
+      }
+    ],
+    "ability": [
+      {
+        "text": "Ups Grass moves in a pinch",
+        "ability": "Overgrow",
+        "effect": "Grass-type move's power is increases by 50% when HP is below 33% of maximum"
+      },
+      {
+        "text": "Heat-and-cold protection",
+        "ability": "Thick Fat",
+        "effect": "When attacked by a fire/ice move, the move's power is cut in half"
+      }
+    ],
+    "moves": {
+      "level": [
+        {
+          "move": "Scratch",
+          "lvl": "1",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "35",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Tail Whip",
+          "lvl": "1",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "30",
+          "power": "",
+          "accuracy": "100"
+        },
+        {
+          "move": "Absorb",
+          "lvl": "7",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "25",
+          "power": "20",
+          "accuracy": "100"
+        },
+        {
+          "move": "Gust",
+          "lvl": "10",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "35",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Razor Leaf",
+          "lvl": "13",
+          "type": "Grass",
+          "catagory": "Physical",
+          "pp": "25",
+          "power": "55",
+          "accuracy": "95"
+        },
+        {
+          "move": "Growth",
+          "lvl": "16",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "False Swipe",
+          "lvl": "19",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "40",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Mega Drain",
+          "lvl": "22",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "40",
+          "power": "40",
+          "accuracy": "100"
+        },
+        {
+          "move": "Leech Seed",
+          "lvl": "25",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "10",
+          "power": "",
+          "accuracy": "90"
+        },
+        {
+          "move": "Aerial Ace",
+          "lvl": "28",
+          "type": "Flying",
+          "catagory": "Physical",
+          "pp": "",
+          "power": "60",
+          "accuracy": ""
+        },
+        {
+          "move": "Air Slash",
+          "lvl": "32",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "20",
+          "power": "75",
+          "accuracy": "95"
+        },
+        {
+          "move": "Synthesis",
+          "lvl": "36",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "Giga Drain",
+          "lvl": "40",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "",
+          "power": "75",
+          "accuracy": "100"
+        },
+        {
+          "move": "Agility",
+          "lvl": "44",
+          "type": "Psychic",
+          "catagory": "Status",
+          "pp": "",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "move": "Seed Bomb",
+          "lvl": "48",
+          "type": "Grass",
+          "catagory": "Physical",
+          "pp": "",
+          "power": "80",
+          "accuracy": "100"
+        }
+      ],
+      "tm": [
+        {
+          "tm": "TM 01",
+          "move": "Swords Dance",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "30",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 02",
+          "move": "Air Slash",
+          "type": "Flying",
+          "catagory": "Special",
+          "pp": "20",
+          "power": "75",
+          "accuracy": "95"
+        },
+        {
+          "tm": "TM 03",
+          "move": "Spikes",
+          "type": "Ground",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 06",
+          "move": "Headbutt",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 11",
+          "move": "Shadow Claw",
+          "type": "Ghost",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 13",
+          "move": "Substitute",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "10",
+          "power": "",
+          "accuracy": ""
+        },
+        {
+          "tm": "TM 16",
+          "move": "Energy Ball",
+          "type": "Grass",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "80",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 19",
+          "move": "Poison Leaf",
+          "type": "Poison",
+          "catagory": "Physical",
+          "pp": "20",
+          "power": "70",
+          "accuracy": "100"
+        },
+        {
+          "tm": "TM 21",
+          "move": "Leech Seed",
+          "type": "Grass",
+          "catagory": "Status",
+          "pp": "10",
+          "power": "",
+          "accuracy": "90"
+        },
+        {
+          "tm": "TM 23",
+          "move": "Iron Tail",
+          "type": "Steel",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "100",
+          "accuracy": "75"
+        },
+        {
+          "tm": "TM 32",
+          "move": "Tri Attack",
+          "type": "Normal",
+          "catagory": "Special",
+          "pp": "10",
+          "power": "80",
+          "accuracy": "100"
+        },
+        {
+          "tm": "HM 01",
+          "move": "Cut",
+          "type": "Normal",
+          "catagory": "Physical",
+          "pp": "30",
+          "power": "50",
+          "accuracy": "95"
+        },
+        {
+          "tm": "HM 05",
+          "move": "Flash",
+          "type": "Normal",
+          "catagory": "Status",
+          "pp": "20",
+          "power": "",
+          "accuracy": "100"
+        },
+        {
+          "tm": "HM 06",
+          "move": "Rock Smash",
+          "type": "Fighting",
+          "catagory": "Physical",
+          "pp": "15",
+          "power": "40",
+          "accuracy": "100"
+        }
+      ],
+      "tutor": [
+        {
+          "move": "Hidden Power"
+        },
+        {
+          "move": "Raid"
+        },
+        {
+          "move": "Rest"
+        },
+        {
+          "move": "Toxic"
+        }
+      ]
+    },
+    "areas": {
+      "walking": [
+        {
+          "area": "Safari Zone (east)",
+          "percent": "40"
+        }
+      ],
+      "surfing": [],
+      "fishing": [],
+      "event": []
+    },
+    "evolutions": [
+      {
+        "num": "1",
+        "name": "Nimbleaf",
+        "level": ""
+      },
+      {
+        "num": "2",
+        "name": "Parsleaf",
+        "level": "16"
+      },
+      {
+        "num": "3",
+        "name": "Caudaleaf",
+        "level": "34"
+      }
+    ]
+  }
+}

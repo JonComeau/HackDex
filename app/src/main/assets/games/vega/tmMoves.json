@@ -1,0 +1,64 @@
+{
+  "moves": [
+    {
+      "tm": "TM 01",
+      "move_name": "Swords Dance"
+    },
+    {
+      "tm": "TM 02",
+      "move_name": "Air Slash"
+    },
+    {
+      "tm": "TM 03",
+      "move_name": "Spikes"
+    },
+    {
+      "tm": "TM 06",
+      "move_name": "Headbutt"
+    },
+    {
+      "tm": "TM 11",
+      "move_name": "Shadow Claw"
+    },
+    {
+      "tm": "TM 13",
+      "move_name": "Substitute"
+    },
+    {
+      "tm": "TM 16",
+      "move_name": "Energy Ball"
+    },
+    {
+      "tm": "TM 19",
+      "move_name": "Poison Leaf"
+    },
+    {
+      "tm": "TM 21",
+      "move_name": "Leech Seed"
+    },
+    {
+      "tm": "TM 23",
+      "move_name": "Iron Tail"
+    },
+    {
+      "tm": "TM 32",
+      "move_name": "Tri Attack"
+    },
+    {
+      "tm": "TM 34",
+      "move_name": "Baton Pass"
+    },
+    {
+      "tm": "HM 01",
+      "move_name": "Cut"
+    },
+    {
+      "tm": "HM 05",
+      "move_name": "Flash"
+    },
+    {
+      "tm": "HM 06",
+      "move_name": "Rock Smash"
+    }
+  ]
+}
