@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 import com.skazerk.hackdex.Main;
+import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 import com.skazerk.hackdex.R;
 
 import static com.skazerk.hackdex.R.id.poke_name;
@@ -62,7 +62,7 @@ public class Info_Fragment extends Fragment{
             infoHolder.ability1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ((Main)getActivity()).onClickInfo((TextView) view);
+                    ((Main) getActivity()).onClick((TextView) view, "ability");
                 }
             });
 
@@ -95,7 +95,7 @@ public class Info_Fragment extends Fragment{
 
             total = first;
 
-            String abil1 = global.getInfoLayout().getAbilties().get(0).getAbitily();
+            String abil1 = global.getInfoLayout().getAbilties().get(0).getAbility();
 
             abil1 += "\n    -" + global.getInfoLayout().getAbilties().get(0).getText();
 
@@ -114,15 +114,15 @@ public class Info_Fragment extends Fragment{
             infoHolder.ability1.setText(ability1);
 
             if(global.getInfoLayout().getAbilties().size() == 2) {
-                abil2 = global.getInfoLayout().getAbilties().get(1).getAbitily();
+                abil2 = global.getInfoLayout().getAbilties().get(1).getAbility();
                 abil2 += "\n    -" + global.getInfoLayout().getAbilties().get(1).getText();
                 infoHolder.ability2.setText(abil2);
             }
 
             if(global.getInfoLayout().getAbilties().size() == 3){
-                abil2 = global.getInfoLayout().getAbilties().get(1).getAbitily();
+                abil2 = global.getInfoLayout().getAbilties().get(1).getAbility();
                 abil2 += "\n    -" + global.getInfoLayout().getAbilties().get(1).getText();
-                abil3 = global.getInfoLayout().getAbilties().get(2).getAbitily();
+                abil3 = global.getInfoLayout().getAbilties().get(2).getAbility();
                 abil3 += "\n    -" + global.getInfoLayout().getAbilties().get(2).getText();
                 infoHolder.ability2.setText(abil2);
                 infoHolder.ability3.setText(abil3);

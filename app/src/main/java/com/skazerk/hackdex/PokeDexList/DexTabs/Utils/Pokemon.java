@@ -2,14 +2,12 @@ package com.skazerk.hackdex.PokeDexList.DexTabs.Utils;
 
 import com.skazerk.hackdex.PokeDexList.DexTabs.Area.Area;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Ability;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -132,10 +130,8 @@ public class Pokemon {
             JSONArray abil_arr = poke_obj.getJSONArray("ability");
             for (int i = 0; i < abil_arr.length(); i++){
                 JSONObject abil_obj = abil_arr.getJSONObject(i);
-                Ability abil = new Ability();
-                abil.setAbitily(abil_obj.getString("ability"));
-                abil.setText(abil_obj.getString("text"));
-                abil.setEffect(abil_obj.getString("effect"));
+                Ability abil = new Ability(abil_obj.getString("ability"), abil_obj.getString
+                        ("text"), abil_obj.getString("effect"));
 
                 abilities.add(abil);
             }

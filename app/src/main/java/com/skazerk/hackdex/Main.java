@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.skazerk.hackdex.PokeDexList.DexListFragment;
+import com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheetFragment;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 
 import org.json.JSONArray;
@@ -50,6 +51,7 @@ public class Main extends AppCompatActivity {
         initFragment(savedInstanceState);
 
         global.loadPokemon(global.getGame());
+        global.reset(global.getGame(), this);
 
         setupNaviDrawer();
     }
@@ -101,13 +103,12 @@ public class Main extends AppCompatActivity {
 
     public void loadPokemonFromJSON(String pokemon) {
         String path = "games/" + global.getGame() + "/pokemon/" + pokemon.toLowerCase() + "/" + pokemon.toLowerCase();
-        Log.d("Main", path);
         String pokemonJSON = loadJSONFromAsset(path);
         Log.d("Main", pokemonJSON);
         global.getPoke().parseJSON(pokemonJSON);
     }
 
-    private String loadJSONFromAsset(String path){
+    public String loadJSONFromAsset(String path) {
         String json;
         try {
             AssetManager am = getAssets();
@@ -145,7 +146,7 @@ public class Main extends AppCompatActivity {
 
     public void popToDexTabs() {
         getSupportFragmentManager().popBackStack("Dex Tab", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        global.resetPoke();
+        global.reset(global.getGame(), this);
     }
 
 
@@ -163,8 +164,13 @@ public class Main extends AppCompatActivity {
         }
     }
 
-    public void onClickInfo(TextView view) {
-        showBottomSheet("info", view.getText().toString());
+    public void onClick(TextView view, String type) {
+        switch (type) {
+            case "ability":
+                String ability = view.getText().toString().split("\n")[1];
+                showBottomSheet(type, ability);
+                break;
+        }
     }
 
     private void loadGames(){
@@ -203,12 +209,12 @@ public class Main extends AppCompatActivity {
         }
     }
 
-    public void showBottomSheet(String version, String ability) {
+    public void showBottomSheet(String version, String item) {
         FragmentTransaction transaction = (this)
                 .getSupportFragmentManager()
                 .beginTransaction();
 
-        new com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheet.BottomSheetFragment();
-        com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheet.BottomSheetFragment.newInstance(ability).show(transaction, version);
+        new BottomSheetFragment();
+        BottomSheetFragment.newInstance(item, version).show(transaction, version);
     }
 }

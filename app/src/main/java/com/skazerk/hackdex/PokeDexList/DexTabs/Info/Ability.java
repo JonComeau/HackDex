@@ -5,16 +5,22 @@ package com.skazerk.hackdex.PokeDexList.DexTabs.Info;
  */
 
 public class Ability {
-    private String abitily;
+    private String ability;
     private String text;
     private String effect;
 
-    public String getAbitily() {
-        return abitily;
+    public Ability(String ability, String text, String effect) {
+        this.ability = ability;
+        this.text = text;
+        this.effect = effect;
     }
 
-    public void setAbitily(String abitily) {
-        this.abitily = abitily;
+    public String getAbility() {
+        return ability;
+    }
+
+    public void setAbility(String ability) {
+        this.ability = ability;
     }
 
     public String getText() {

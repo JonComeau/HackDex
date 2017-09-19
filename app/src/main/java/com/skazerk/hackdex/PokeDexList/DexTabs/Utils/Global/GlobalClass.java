@@ -2,6 +2,7 @@ package com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global;
 
 import android.app.Application;
 
+import com.skazerk.hackdex.Main;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Info.InfoLayout;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Info.NameLayout;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
@@ -22,18 +23,27 @@ import java.util.Scanner;
  */
 
 public class GlobalClass extends Application {
-    private final Moves moves;
-    private final Abilities abilities;
+    private Moves moves;
+    private Abilities abilities;
     private List<String> pokemon = new ArrayList<>();
     private String game;
     private Pokemon poke;
     private InfoLayout infoLayout;
     private NameLayout nameLayout;
+    private Main main;
 
     public GlobalClass(){
+    }
+
+    public void reset(String game, Main main) {
         resetPoke();
-        moves = new Moves();
-        abilities = new Abilities();
+        this.main = main;
+        this.abilities = new Abilities(this, game);
+        this.moves = new Moves();
+    }
+
+    public Main getMain() {
+        return this.main;
     }
 
     public String getGame() {
@@ -46,6 +56,10 @@ public class GlobalClass extends Application {
 
     public Map<String, List<Abilities.PokemonSmall>> getPokemonByAbility() {
         return abilities.getPokemonByAbility();
+    }
+
+    public List<String> getAbilityInfoAndEffect(String ability) {
+        return abilities.getAbilityInfoAndEffect(ability);
     }
 
     public List<String> getPokemon() {
