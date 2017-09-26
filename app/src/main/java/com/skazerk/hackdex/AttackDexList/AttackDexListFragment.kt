@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass
 import com.skazerk.hackdex.R
+import com.skazerk.hackdex.Utils.Global.GlobalClass
 
 /**
  * Created by jcomeau on 9/12/2017.

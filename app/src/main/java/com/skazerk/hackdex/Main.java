@@ -13,12 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.skazerk.hackdex.PokeDexList.DexListFragment;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Info.BottomSheetFragment;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
+import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Dialog.CustomDialog;
+import com.skazerk.hackdex.Utils.Activity;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,12 +50,12 @@ public class Main extends AppCompatActivity {
 
         loadGames();
         createPreferences();
-        initFragment(savedInstanceState);
 
-        global.loadPokemon(global.getGame());
-        global.reset(global.getGame(), this);
+        global.reset(this);
+        global.loadPokemon();
 
         setupNaviDrawer();
+        initFragment(savedInstanceState);
     }
 
     private void setupNaviDrawer() {
@@ -83,12 +85,7 @@ public class Main extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.poke_dex:
                         Toast.makeText(getApplicationContext(),"Pokedex Selected",Toast.LENGTH_SHORT).show();
-//                        ContentFragment fragment = new ContentFragment();
-//                        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                        fragmentTransaction.replace(R.id.frame,fragment);
-//                        fragmentTransaction.commit();
                         return true;
-
                     case R.id.attack_dex:
                         Toast.makeText(getApplicationContext(),"Attackdex Selected",Toast.LENGTH_SHORT).show();
                         return true;
@@ -146,9 +143,8 @@ public class Main extends AppCompatActivity {
 
     public void popToDexTabs() {
         getSupportFragmentManager().popBackStack("Dex Tab", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        global.reset(global.getGame(), this);
+        global.reset(this);
     }
-
 
     public void addFragment(Fragment fragment, String name) {
         if(getSupportFragmentManager().getBackStackEntryCount() == 0) {
@@ -164,11 +160,18 @@ public class Main extends AppCompatActivity {
         }
     }
 
-    public void onClick(TextView view, String type) {
+    public void onClick(View view, String type) {
+        TextView text;
         switch (type) {
             case "ability":
-                String ability = view.getText().toString().split("\n")[1];
-                showBottomSheet(type, ability);
+                text = (TextView) view;
+                String ability = text.getText().toString().split("\n")[1];
+                showDialog(type, ability);
+                break;
+            case "move":
+                text = view.findViewById(R.id.move_name);
+                String move = text.getText().toString();
+                showDialog(type, move);
                 break;
         }
     }
@@ -192,29 +195,33 @@ public class Main extends AppCompatActivity {
     }
 
     private void createPreferences(){
-        SharedPreferences settings = getPreferences(MODE_PRIVATE);
+        SharedPreferences settings = getSharedPreferences("app", MODE_PRIVATE);
         if (!settings.contains("current")) {
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("current", "vega");
             editor.apply();
+        } else {
+            Log.d("Settings", settings.getString("current", "Nothing"));
         }
-        global.setGame(settings.getString("current", null));
+        if (!settings.contains("activity")) {
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putInt("activity", Activity.Pokedex.getValue());
+            editor.apply();
+        }
+        global.setActivity(Activity.valueOf(settings.getInt("activity", 0)));
     }
 
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+        Log.d("BackStack", getSupportFragmentManager().getBackStackEntryCount() + "");
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
             getSupportFragmentManager().popBackStack();
         } else {
-            super.onBackPressed();
+            finishAndRemoveTask();
         }
     }
 
-    public void showBottomSheet(String version, String item) {
-        FragmentTransaction transaction = (this)
-                .getSupportFragmentManager()
-                .beginTransaction();
-
-        new BottomSheetFragment();
-        BottomSheetFragment.newInstance(item, version).show(transaction, version);
+    public void showDialog(String listTitle, String listType) {
+        FragmentTransaction transaction = (this).getSupportFragmentManager().beginTransaction();
+        CustomDialog.newInstance(listTitle, listType).show(transaction, listType);
     }
 }

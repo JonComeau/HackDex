@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.DexTabFragment;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
-import com.skazerk.hackdex.R;
 import com.skazerk.hackdex.Main;
+import com.skazerk.hackdex.PokeDexList.DexTabs.DexTabFragment;
+import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
+import com.skazerk.hackdex.Utils.Pokemon;
 
 import java.util.ArrayList;
 

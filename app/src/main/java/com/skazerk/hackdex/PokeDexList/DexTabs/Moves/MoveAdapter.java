@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
 import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Pokemon;
 
 import java.util.ArrayList;
 
@@ -62,10 +62,10 @@ public class MoveAdapter extends BaseAdapter {
         if(view == null){
             view = dInflater.inflate(R.layout.move_entry, viewGroup, false);
             holder = new MoveHolder();
-            holder.lvl = (TextView) view.findViewById(R.id.move_lvl);
-            holder.move = (TextView) view.findViewById(R.id.move_name);
-            holder.type = (TextView) view.findViewById(R.id.move_type);
-            holder.catagory = (TextView) view.findViewById(R.id.move_cat);
+            holder.lvl = view.findViewById(R.id.move_lvl);
+            holder.move = view.findViewById(R.id.move_name);
+            holder.type = view.findViewById(R.id.move_type);
+            holder.catagory = view.findViewById(R.id.move_cat);
             view.setTag(holder);
         } else {
             holder = (MoveHolder) view.getTag();

@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,7 +47,7 @@ public class Area_Fragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        expListView = (ExpandableListView) view.findViewById(R.id.area_list);
+        expListView = view.findViewById(R.id.area_list);
 
         insertListData();
 

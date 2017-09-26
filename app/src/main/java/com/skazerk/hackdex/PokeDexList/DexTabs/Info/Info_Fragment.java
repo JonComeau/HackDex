@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.skazerk.hackdex.Main;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
 
 import static com.skazerk.hackdex.R.id.poke_name;
 import static com.skazerk.hackdex.R.id.poke_num;
@@ -62,7 +62,7 @@ public class Info_Fragment extends Fragment{
             infoHolder.ability1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ((Main) getActivity()).onClick((TextView) view, "ability");
+                    ((Main) getActivity()).onClick(view, "ability");
                 }
             });
 
@@ -120,11 +120,8 @@ public class Info_Fragment extends Fragment{
             }
 
             if(global.getInfoLayout().getAbilties().size() == 3){
-                abil2 = global.getInfoLayout().getAbilties().get(1).getAbility();
-                abil2 += "\n    -" + global.getInfoLayout().getAbilties().get(1).getText();
                 abil3 = global.getInfoLayout().getAbilties().get(2).getAbility();
                 abil3 += "\n    -" + global.getInfoLayout().getAbilties().get(2).getText();
-                infoHolder.ability2.setText(abil2);
                 infoHolder.ability3.setText(abil3);
             }
 

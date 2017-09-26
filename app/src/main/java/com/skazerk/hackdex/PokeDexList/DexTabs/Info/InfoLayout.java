@@ -1,6 +1,6 @@
 package com.skazerk.hackdex.PokeDexList.DexTabs.Info;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
+import com.skazerk.hackdex.Utils.Pokemon;
 
 import java.util.ArrayList;
 import java.util.List;

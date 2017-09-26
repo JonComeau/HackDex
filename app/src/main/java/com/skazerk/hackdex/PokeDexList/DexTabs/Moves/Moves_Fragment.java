@@ -7,10 +7,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
+import com.skazerk.hackdex.Main;
 import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
+import com.skazerk.hackdex.Utils.Pokemon;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -57,7 +59,14 @@ public class Moves_Fragment extends ListFragment {
 
         setListAdapter(lvl_adapter);
 
+
         return inflater.inflate(R.layout.moves, container, false);
+    }
+
+    @Override
+    public void onListItemClick(ListView list, View view, int position, long id) {
+        super.onListItemClick(list, view, position, id);
+        ((Main) getActivity()).onClick(view, "move");
     }
 
     public void onDestroy(){
@@ -83,8 +92,8 @@ public class Moves_Fragment extends ListFragment {
     private static boolean deleteDir(File dir) {
         if (dir != null && dir.isDirectory()) {
             String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
+            for (String aChildren : children) {
+                boolean success = deleteDir(new File(dir, aChildren));
                 if (!success)
                     return false;
             }

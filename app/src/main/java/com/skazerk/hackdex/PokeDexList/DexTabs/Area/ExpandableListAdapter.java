@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Pokemon;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass;
 import com.skazerk.hackdex.R;
+import com.skazerk.hackdex.Utils.Global.GlobalClass;
+import com.skazerk.hackdex.Utils.Pokemon;
 
 import java.util.HashMap;
 import java.util.List;
@@ -56,8 +56,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.area_item, null);
         }
 
-        final TextView text = (TextView) convertView.findViewById(R.id.area_item);
-        TextView percent = (TextView) convertView.findViewById(R.id.area_percent);
+        final TextView text = convertView.findViewById(R.id.area_item);
+        TextView percent = convertView.findViewById(R.id.area_percent);
 
         String[] parts = childText.split(",");
 
@@ -98,7 +98,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.area_header, null);
         }
 
-        TextView text = (TextView) convertView.findViewById(R.id.area_header);
+        TextView text = convertView.findViewById(R.id.area_header);
 
         text.setText(header);
 

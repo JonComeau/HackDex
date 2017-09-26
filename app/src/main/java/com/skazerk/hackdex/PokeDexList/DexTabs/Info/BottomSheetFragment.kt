@@ -12,9 +12,9 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.Abilities
-import com.skazerk.hackdex.PokeDexList.DexTabs.Utils.Global.GlobalClass
 import com.skazerk.hackdex.R
+import com.skazerk.hackdex.Utils.Global.GlobalClass
+import com.skazerk.hackdex.Utils.Global.PokemonSmall
 
 class BottomSheetFragment : BottomSheetDialogFragment() {
     lateinit var global: GlobalClass
@@ -55,7 +55,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         val listTitle = arguments["ListTitle"] as String
         val listType = arguments["ListType"] as String
 
-        val list: MutableList<Abilities.PokemonSmall> = loadList(listTitle, listType)
+        val list: MutableList<PokemonSmall> = loadList(listTitle, listType)
 
         for (item in list) {
             Log.d("Bottom Sheet", item.num + ", " + item.name)
@@ -113,8 +113,8 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         }
     }
 
-    fun loadList(listTitle: String, listType: String): MutableList<Abilities.PokemonSmall> {
-        val map: MutableMap<String, MutableList<Abilities.PokemonSmall>>
+    fun loadList(listTitle: String, listType: String): MutableList<PokemonSmall> {
+        val map: MutableMap<String, MutableList<PokemonSmall>>
 
         when (listType) {
             "ability" -> map = global.pokemonByAbility
