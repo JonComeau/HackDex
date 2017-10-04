@@ -57,11 +57,16 @@ public class Abilities {
                     List<PokemonSmall> value = pokemonByAbility.get(pair.getKey());
                     String pokemon = pokemonAbilityObj.getString("pokemon");
                     Log.d("Abilities", pokemon);
+                    for (String poke : global.getPokemon()) {
+                        Log.v("Abilities", poke);
+                    }
                     if (value != null) {
-                        pokemonByAbility.get(pair.getKey()).add(new PokemonSmall((global.getPokemon().indexOf(pokemon) + 1) + "", pokemon));
+                        pokemonByAbility.get(pair.getKey()).add(new PokemonSmall((global
+                                .getPokemon().indexOf(pokemon) + 1) + "", pokemon));
                     } else {
                         value = new ArrayList<>();
-                        value.add(new PokemonSmall((global.getPokemon().indexOf(pokemon) + 1) + "", pokemon));
+                        value.add(new PokemonSmall((global.getPokemon().indexOf(pokemon) + 1) +
+                                "", pokemon));
                         pokemonByAbility.put((String) pair.getKey(), value);
                     }
                 }

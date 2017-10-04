@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="5sp"
+        android:text="@string/defaultstr"
+        android:textSize="40sp"/>
+
+    <include layout="@layout/divider"/>
+
+    <TextView
+        android:id="@+id/dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="5sp"
+        android:gravity="center"
+        android:text="@string/testtext"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/dialog_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="5sp"
+        android:gravity="center"
+        android:text="@string/defaulteffect"
+        android:textSize="18sp"/>
+
+    <include layout="@layout/divider"/>
+
+    <TextView
+        android:id="@+id/pokemon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="5sp"
+        android:gravity="center"
+        android:text="@string/pokemon"
+        android:textSize="30sp"/>
+
+    <include layout="@layout/divider"/>
 
     <ListView
+        android:id="@+id/dialog_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/dialog_list"/>
-
+        android:layout_height="match_parent"/>
 </LinearLayout>

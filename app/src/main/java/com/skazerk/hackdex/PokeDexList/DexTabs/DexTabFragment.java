@@ -7,13 +7,12 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.skazerk.hackdex.PokeDexList.DexTabs.Area.Area_Fragment;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Evolution.Evo_Fragment;
+import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Info_Fragment;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Moves.Moves_Fragment;
 import com.skazerk.hackdex.R;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Info_Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,6 @@ import java.util.List;
 public class DexTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Toast.makeText(getContext(), "Dex Fragment is Init", Toast.LENGTH_SHORT).show();
         View result = inflater.inflate(R.layout.dex_tabs_fragment, container, false);
         ViewPager pager = result.findViewById(R.id.dex_tabs);
 

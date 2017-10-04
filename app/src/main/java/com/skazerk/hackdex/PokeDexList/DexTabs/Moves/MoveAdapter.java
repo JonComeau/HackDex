@@ -57,7 +57,7 @@ public class MoveAdapter extends BaseAdapter {
         }
 
         Log.d("Move_List", "getting view");
-        MoveHolder holder = null;
+        MoveHolder holder;
 
         if(view == null){
             view = dInflater.inflate(R.layout.move_entry, viewGroup, false);

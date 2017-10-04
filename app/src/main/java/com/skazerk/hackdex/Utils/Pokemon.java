@@ -1,5 +1,7 @@
 package com.skazerk.hackdex.Utils;
 
+import android.util.Log;
+
 import com.skazerk.hackdex.PokeDexList.DexTabs.Area.Area;
 import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Ability;
 
@@ -15,18 +17,30 @@ import java.util.List;
  */
 
 public class Pokemon {
-    private String[] num_name = new String[2];
-    private ArrayList<String> types = new ArrayList<>();
-    private ArrayList<Ability> abilities = new ArrayList<>();
-    private String entry = "";
-    private ArrayList<Stat> stats = new ArrayList<>();
-    private ArrayList<Move> lvl_moves = new ArrayList<>();
-    private ArrayList<Integer> effects = new ArrayList<>();
+    private String[] num_name;
+    private ArrayList<String> types;
+    private ArrayList<Ability> abilities;
+    private String entry;
+    private ArrayList<Stat> stats;
+    private ArrayList<Move> lvl_moves;
+    private ArrayList<Integer> effects;
 
-    private ArrayList<ArrayList<String>> evos = new ArrayList<>();
+    private ArrayList<ArrayList<String>> evos;
 
     //area list: walking, surfing, fishing, event
-    private Area areas = new Area();
+    private Area areas;
+
+    public Pokemon() {
+        num_name = new String[2];
+        types = new ArrayList<>();
+        abilities = new ArrayList<>();
+        entry = "";
+        stats = new ArrayList<>();
+        lvl_moves = new ArrayList<>();
+        effects = new ArrayList<>();
+        evos = new ArrayList<>();
+        areas = new Area();
+    }
 
     public String getPer(String area, String method) {
         switch(method) {
@@ -210,6 +224,10 @@ public class Pokemon {
                 tmp.add(evo_obj.getString("level"));
 
                 evos.add(tmp);
+            }
+
+            for (List evo : evos) {
+                Log.v("Pokemon", (String) evo.get(0));
             }
 
         } catch (JSONException e) {

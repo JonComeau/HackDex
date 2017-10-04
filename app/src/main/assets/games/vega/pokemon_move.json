@@ -1,179 +1,247 @@
 {
-    "Absorb": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Aerial Ace": [
-        { "level": [
-                { "pokemon": "Nimbleaf" }
-            ]
-        }
-    ],
-    "Agility": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Air Slash": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" }
-            ]
-        }
-    ],
-    "Bounce": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Energy Ball": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "False Swipe": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Frenzy Plant": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Giga Drain": [
-        { "level": [
-                { "pokemon": "Nimbleaf" }
-            ]
-        }
-    ],
-    "Growth": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Guardian Leaf": [
-        { "level": [
-                { "pokemon": "Parsleaf" }
-            ]
-        }
-    ],
-    "Gust": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Leaf Blade": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Leaf Storm": [
-        { "level": [
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Leaf Tornado": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Leech Seed": [
-        { "level": [
-                { "pokemon": "Nimbleaf" }
-            ]
-        }
-    ],
-    "Mega Drain": [
-        { "level": [
-                { "pokemon": "Nimbleaf" }
-            ]
-        }
-    ],
-    "Razor Leaf": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Scratch": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Seed Bomb": [
-        { "level": [
-                { "pokemon": "Nimbleaf" }
-            ]
-        }
-    ],
-    "Solar Beam": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Synthesis": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Tail Whip": [
-        { "level": [
-                { "pokemon": "Nimbleaf" },
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Typhoon": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Whirlwind": [
-        { "level": [
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
-    ],
-    "Wild Growth": [
-        { "level": [
-                { "pokemon": "Parsleaf" },
-                { "pokemon": "Caudaleaf" }
-            ]
-        }
+  "Absorb": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
     ]
+  },
+  "Aerial Ace": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      }
+    ]
+  },
+  "Agility": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Air Slash": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      }
+    ]
+  },
+  "Bounce": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Energy Ball": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "False Swipe": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Frenzy Plant": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Giga Drain": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      }
+    ]
+  },
+  "Growth": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Guardian Leaf": {
+    "level": [
+      {
+        "pokemon": "Parsleaf"
+      }
+    ]
+  },
+  "Gust": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Leaf Blade": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Leaf Storm": {
+    "level": [
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Leaf Tornado": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Leech Seed": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      }
+    ]
+  },
+  "Mega Drain": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      }
+    ]
+  },
+  "Razor Leaf": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Scratch": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Seed Bomb": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      }
+    ]
+  },
+  "Solar Beam": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Synthesis": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Tail Whip": {
+    "level": [
+      {
+        "pokemon": "Nimbleaf"
+      },
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Typhoon": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Whirlwind": {
+    "level": [
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  },
+  "Wild Growth": {
+    "level": [
+      {
+        "pokemon": "Parsleaf"
+      },
+      {
+        "pokemon": "Caudaleaf"
+      }
+    ]
+  }
 }

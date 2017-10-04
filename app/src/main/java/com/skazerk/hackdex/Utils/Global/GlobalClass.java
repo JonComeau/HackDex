@@ -36,13 +36,14 @@ public class GlobalClass extends Application {
     private Main main;
     private Activity activity;
 
-    public GlobalClass(){
+    public GlobalClass() {
     }
 
     public void reset(Main main) {
         resetPoke();
         this.main = main;
         openSharedPreferences();
+        loadPokemon();
         this.abilities = new Abilities(this);
         this.moves = new Moves(this);
     }
@@ -81,6 +82,10 @@ public class GlobalClass extends Application {
         return abilities.getAbilityInfoAndEffect(ability);
     }
 
+    public List<String> getTms() {
+        return moves.getTms();
+    }
+
     public List<String> getPokemon() {
         return pokemon;
     }
@@ -100,6 +105,7 @@ public class GlobalClass extends Application {
             for (int i = 0; i < pokemonJSONArray.length(); i++) {
                 JSONObject pokemonJSONObj = pokemonJSONArray.getJSONObject(i);
                 pokemon.add(pokemonJSONObj.getString("name"));
+                Log.v("GlobalClass", pokemon.indexOf(pokemonJSONObj.getString("name")) + "");
             }
         } catch (JSONException | IOException e) {
             e.printStackTrace();
@@ -137,7 +143,10 @@ public class GlobalClass extends Application {
         return abilities.getAbilities(ability);
     }
 
-    public void resetPoke() { this.poke = new Pokemon(); }
+    public void resetPoke() {
+        Log.d("GlobalClass", "New Pokemon");
+        this.poke = new Pokemon();
+    }
 
     public Pokemon getPoke() { return poke; }
 

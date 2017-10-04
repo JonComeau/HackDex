@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,10 +21,14 @@ import java.util.Map;
 public class Moves {
     private GlobalClass global;
     private List<Move> moves;
+    private List<MachineMove> tms;
     private Map<String, List<PokemonSmall>> pokemonByMove;
 
     public Moves(Context context) {
         global = (GlobalClass) context;
+        moves = new ArrayList<>();
+        tms = new ArrayList<>();
+        pokemonByMove = new HashMap<>();
         loadMoves();
         Log.e("GlobalContext", "Game: " + global.getGame());
     }
@@ -43,6 +48,16 @@ public class Moves {
             }
         }
         return new Move();
+    }
+
+    public List<String> getTms() {
+        List<String> tmp = new ArrayList<>();
+
+        for (MachineMove move : tms) {
+            tmp.add(move.machineName);
+        }
+
+        return tmp;
     }
 
     public List<PokemonSmall> getPokemonByMove(String move) {
@@ -71,19 +86,22 @@ public class Moves {
 
     public void loadMoves() {
         moves = new ArrayList<>();
-        Log.e("GlobalContext", "Load Game: " + global.getGame());
+        Log.e("Moves", "Load Game: " + global.getGame());
         try {
-            String pokemonJSONStr = global.getMain().loadJSONFromAsset("games/" + global.getGame() +
-                    "/moves" + ".json");
+            String moveJSONStr = global.getMain().loadJSONFromAsset("games/" + global.getGame() +
+                    "/moves.json");
             String pokemonMoveJSONStr = global.getMain().loadJSONFromAsset("games/" + global.getGame() +
                     "/pokemon_move.json");
+            String tmJSONStr = global.getMain().loadJSONFromAsset("games/" + global.getGame() +
+                    "/tmMoves.json");
+            Log.v("JSON", tmJSONStr);
 
-            JSONObject moveJSONObj = new JSONObject(pokemonJSONStr);
-            JSONArray moveJSONArray = moveJSONObj.getJSONArray("move");
+            JSONObject moveJSONObj = new JSONObject(moveJSONStr);
+            JSONArray moveJSONArray = moveJSONObj.getJSONArray("moves");
             for (int i = 0; i < moveJSONArray.length(); i++) {
                 JSONObject moveObj = moveJSONArray.getJSONObject(i);
                 Move tmp_move = new Move();
-                tmp_move.name = moveObj.getString("name");
+                tmp_move.name = moveObj.getString("move_name");
                 tmp_move.type = moveObj.getString("type");
                 tmp_move.catagory = moveObj.getString("catagory");
                 tmp_move.power = moveObj.getString("power");
@@ -93,28 +111,57 @@ public class Moves {
             }
             Collections.sort(moves, new MoveComparator());
 
+            JSONObject tmJSONObj = new JSONObject(tmJSONStr);
+            JSONArray tmJSONArray = tmJSONObj.getJSONArray("moves");
+            for (int i = 0; i < tmJSONArray.length(); i++) {
+                JSONObject tmObj = tmJSONArray.getJSONObject(i);
+                Log.v("JSON", tmObj.toString());
+                MachineMove tmp_move = new MachineMove();
+                tmp_move.isHM = tmObj.getString("tm").contains("HM");
+                tmp_move.machineName = tmObj.getString("move_name");
+                tmp_move.machineNumber = tmObj.getString("tm").substring(3);
+                tms.add(tmp_move);
+            }
+
             JSONObject pokemonMoveJSONObj = new JSONObject(pokemonMoveJSONStr);
             for (Move move : moves) {
-                JSONArray pokemonMoveJSONArray = pokemonMoveJSONObj.getJSONArray(move.name);
-                for (int i = 0; i < pokemonMoveJSONArray.length(); i++) {
-                    JSONObject pokemonMoveObj = pokemonMoveJSONArray.getJSONObject(i);
+                if (!pokemonMoveJSONObj.has(move.name))
+                    continue;
+                Log.v("Moves", "Move name: " + move.name);
+                JSONObject pokemonMoveJSONNameObj = pokemonMoveJSONObj.getJSONObject(move.name);
+                List<String> keys = new ArrayList<>();
+                if (pokemonMoveJSONNameObj.has("level"))
+                    keys.add("level");
 
-                    List<PokemonSmall> tmp = pokemonByMove.get(move.name);
-                    String pokemon = pokemonMoveObj.getString("pokemon");
-                    Log.d("Moves", pokemon);
-                    if (tmp != null) {
-                        pokemonByMove.get(move.name).add(new PokemonSmall((global.getPokemon()
-                                .indexOf(pokemon) + 1) + "", pokemon));
-                    } else {
-                        tmp = new ArrayList<>();
-                        tmp.add(new PokemonSmall((global.getPokemon()
-                                .indexOf(pokemon) + 1) + "", pokemon));
-                        pokemonByMove.put(move.name, tmp);
+                List<PokemonSmall> tmp;
+
+                for (String key : keys) {
+                    JSONArray pokemonMoveArray = pokemonMoveJSONNameObj.getJSONArray(key);
+
+                    for (int j = 0; j < pokemonMoveArray.length(); j++) {
+                        JSONObject pokemonMoveObj = pokemonMoveArray.getJSONObject(j);
+                        String pokemon = pokemonMoveObj.getString("pokemon");
+                        Log.d("Moves", pokemon);
+                        if (pokemonByMove.containsKey(move.name)) {
+                            pokemonByMove.get(move.name).add(new PokemonSmall((global.getPokemon()
+                                    .indexOf(pokemon) + 1) + "", pokemon));
+                        } else {
+                            tmp = new ArrayList<>();
+                            tmp.add(new PokemonSmall((global.getPokemon()
+                                    .indexOf(pokemon) + 1) + "", pokemon));
+                            pokemonByMove.put(move.name, tmp);
+                        }
                     }
                 }
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public class MachineMove {
+        public boolean isHM;
+        public String machineName;
+        public String machineNumber;
     }
 }

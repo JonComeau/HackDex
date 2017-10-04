@@ -17,9 +17,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.skazerk.hackdex.AttackDexList.Tabs.AttackDexTabFragment;
 import com.skazerk.hackdex.PokeDexList.DexListFragment;
-import com.skazerk.hackdex.PokeDexList.DexTabs.Info.Dialog.CustomDialog;
 import com.skazerk.hackdex.Utils.Activity;
+import com.skazerk.hackdex.Utils.Dialog.CustomDialog;
 import com.skazerk.hackdex.Utils.Global.GlobalClass;
 
 import org.json.JSONArray;
@@ -34,6 +35,7 @@ import java.util.Scanner;
 
 public class Main extends AppCompatActivity {
     private String tag = "MAIN";
+    private int index;
 
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
@@ -52,10 +54,9 @@ public class Main extends AppCompatActivity {
         createPreferences();
 
         global.reset(this);
-        global.loadPokemon();
 
         setupNaviDrawer();
-        initFragment(savedInstanceState);
+        initFragment();
     }
 
     private void setupNaviDrawer() {
@@ -84,24 +85,43 @@ public class Main extends AppCompatActivity {
 
                 switch (menuItem.getItemId()){
                     case R.id.poke_dex:
+                        index = 0;
+                        setListIndex(index);
+                        initFragment();
                         Toast.makeText(getApplicationContext(),"Pokedex Selected",Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.attack_dex:
+                        index = 1;
+                        setListIndex(index);
+                        initFragment();
                         Toast.makeText(getApplicationContext(),"Attackdex Selected",Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.location_dex:
+                        //index = 2;
+                        setListIndex(index);
+                        initFragment();
                         Toast.makeText(getApplicationContext(),"Locationdex Selected",Toast.LENGTH_SHORT).show();
                         return true;
-                    }
+                }
+
                 return false;
             }
         });
+    }
+
+    public void setListIndex(int index) {
+        SharedPreferences settings = getSharedPreferences("app", MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("listIndex", index);
+        editor.apply();
     }
 
     public void loadPokemonFromJSON(String pokemon) {
         String path = "games/" + global.getGame() + "/pokemon/" + pokemon.toLowerCase() + "/" + pokemon.toLowerCase();
         String pokemonJSON = loadJSONFromAsset(path);
         Log.d("Main", pokemonJSON);
+        global.resetPoke();
         global.getPoke().parseJSON(pokemonJSON);
     }
 
@@ -128,12 +148,22 @@ public class Main extends AppCompatActivity {
         return json;
     }
 
-    private void initFragment(Bundle savedInstanceState){
+    private void initFragment() {
         if(findViewById(R.id.dex_fragment) != null) {
-            if (savedInstanceState != null) {
-                return;
+
+            Fragment fragment = new Fragment();
+
+            switch (this.index) {
+                case 0:
+                    fragment = new DexListFragment();
+                    break;
+                case 1:
+                    fragment = new AttackDexTabFragment();
+                    break;
+                case 2:
+                    break;
             }
-            DexListFragment fragment = new DexListFragment();
+
             Bundle bundle = new Bundle();
             bundle.putString("game", global.getGame());
             fragment.setArguments(bundle);
@@ -166,12 +196,12 @@ public class Main extends AppCompatActivity {
             case "ability":
                 text = (TextView) view;
                 String ability = text.getText().toString().split("\n")[1];
-                showDialog(type, ability);
+                showDialog(ability, type);
                 break;
             case "move":
                 text = view.findViewById(R.id.move_name);
                 String move = text.getText().toString();
-                showDialog(type, move);
+                showDialog(move, type);
                 break;
         }
     }
@@ -209,6 +239,12 @@ public class Main extends AppCompatActivity {
             editor.apply();
         }
         global.setActivity(Activity.valueOf(settings.getInt("activity", 0)));
+        if (!settings.contains("listIndex")) {
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putInt("listIndex", 0);
+            editor.apply();
+        }
+        index = settings.getInt("listIndex", 0);
     }
 
     public void onBackPressed() {
@@ -221,6 +257,7 @@ public class Main extends AppCompatActivity {
     }
 
     public void showDialog(String listTitle, String listType) {
+        Log.v("Dialog", listTitle + ", " + listType);
         FragmentTransaction transaction = (this).getSupportFragmentManager().beginTransaction();
         CustomDialog.newInstance(listTitle, listType).show(transaction, listType);
     }

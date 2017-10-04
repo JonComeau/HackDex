@@ -24,4 +24,5 @@
     <color name="ghost">#705898</color>
     <color name="dark">#705848</color>
     <color name="steel">#B8B8D0</color>
+    <color name="divider">#FFFFFF</color>
 </resources>

@@ -53,7 +53,6 @@ public class Info_Fragment extends Fragment{
         global.setNameLayout(new NameLayout());
 
         try {
-
             //Setting info
             infoHolder.entry = view.findViewById(R.id.entry);
 

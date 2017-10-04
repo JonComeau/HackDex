@@ -6,10 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-/**
- * Created by Skaze on 9/9/17.
- */
-
 public class DexPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragments;
 

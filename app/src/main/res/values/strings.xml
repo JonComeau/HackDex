@@ -421,4 +421,8 @@
     <string name="pokeDex">Pokedex</string>
     <string name="attackDex">Attackdex</string>
     <string name="locationDex">LocationDex</string>
+    <string name="testtext">Text</string>
+    <string name="defaultstr">Default</string>
+    <string name="defaulteffect">Grass-type move\'s power is increase by 50% when HP is below 33% of Maximum</string>
+    <string name="pokemon">Pokemon</string>
 </resources>
