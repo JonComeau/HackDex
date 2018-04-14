@@ -11,9 +11,6 @@ import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
 import com.skazerk.hackdex.R
 
-/**
- * Created by Skaze on 10/1/17.
- */
 class AttackDexListAdapter(private val list: List<Any>, private val id: Int) : BaseAdapter() {
     private lateinit var inflater: LayoutInflater
 
@@ -33,16 +30,16 @@ class AttackDexListAdapter(private val list: List<Any>, private val id: Int) : B
         inflater = viewGroup?.context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
         val move: TextView
-        var view = p1
+        var view: View? = p1
 
         when (id) {
             0 -> {
-                if (view == null) {
+                if (p1 == null) {
                     view = inflater.inflate(R.layout.simple_list_item_layout, viewGroup, false)
                     move = view.findViewById(R.id.simple_list_item)
                     view.tag = move
                 } else {
-                    move = view.tag as TextView
+                    move = view!!.tag as TextView
                 }
 
                 val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
@@ -56,18 +53,17 @@ class AttackDexListAdapter(private val list: List<Any>, private val id: Int) : B
                 move.layoutParams = params
             }
             1 -> {
-                if (view == null) {
+                if (p1 == null) {
                     view = inflater.inflate(R.layout.simple_list_item_layout, viewGroup, false)
                     move = view.findViewById(R.id.simple_list_item)
-                    view.tag = move
+                    view.tag = TMHolder(tm, move)
                 } else {
-                    move = view.tag as TextView
+                    move = view!!.tag as TextView
                 }
 
                 val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
 
                 params.setMargins(convertPXToSP(10f, view!!.context), convertPXToSP(5f, view.context), convertPXToSP(10f, view.context), convertPXToSP(5f, view.context))
-
 
                 move.gravity = Gravity.CENTER
 
@@ -84,5 +80,5 @@ class AttackDexListAdapter(private val list: List<Any>, private val id: Int) : B
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.resources.displayMetrics).toInt()
     }
 
-    private class ViewHolder
+    private class TMHolder(var tm: View, var text: View) {  }
 }

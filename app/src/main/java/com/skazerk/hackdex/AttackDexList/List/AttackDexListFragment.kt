@@ -25,7 +25,10 @@ class AttackDexListFragment : ListFragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         global = context.applicationContext as GlobalClass
 
-        listAdapter = AttackDexListAdapter(global.moves, 0)
+        listAdapter = AttackDexListAdapter(
+                global.moves,
+                0
+        )
 
         return inflater!!.inflate(R.layout.dex_fragment, container, false)
     }

@@ -4,12 +4,12 @@ buildscript {
     ext.kotlin_version = '1.1.51'
     repositories {
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
+        mavenLocal()
+        mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-beta7'
+        classpath 'com.android.tools.build:gradle:3.1.0-alpha04'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,11 +21,17 @@ apply plugin: 'kotlin'
 allprojects {
     repositories {
         jcenter()
+        mavenLocal()
+        mavenCentral()
+        google()
     }
 }
 
 repositories {
+    jcenter()
+    mavenLocal()
     mavenCentral()
+    google()
 }
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
